@@ -1,9 +1,32 @@
-# Node modules
-api/node_modules
-frontend/node_modules
-
-# Env files
-api/.env
+# Dependency directories
+# This is the most important line and will remove thousands of files
+/node_modules
+/frontend/node_modules
+/api/node_modules
 
 # Build output
-frontend/dist
+/frontend/dist
+
+# Environment variables - VERY IMPORTANT for security
+# This will ignore the file where you store your MONGO_URI
+.env
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-error.log
+yarn-debug.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
