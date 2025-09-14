@@ -1,8 +1,0 @@
-{
-  "name": "mern-todo-monorepo",
-  "private": true,
-  "workspaces": [
-    "frontend",
-    "api"
-  ]
-}
