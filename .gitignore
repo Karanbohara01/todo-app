@@ -1,9 +1,9 @@
 # Node modules
-backend/node_modules
+api/node_modules
 frontend/node_modules
 
 # Env files
-backend/.env
+api/.env
 
 # Build output
 frontend/dist
