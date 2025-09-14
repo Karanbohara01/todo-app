@@ -3,7 +3,8 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const taskRoutes = require('./routes/taskRoutes');
+
+const taskRoutes = require('./routes/taskRoutes')
 
 
 const app = express();
@@ -20,6 +21,10 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Routes
 app.use('/api/tasks', taskRoutes);
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => console.log(`Server is running locally on port ${PORT}`));
+}
 
 // Export the app
 module.exports = app;
